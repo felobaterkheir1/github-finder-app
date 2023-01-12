@@ -10,6 +10,22 @@ const GithubReducers = (state, action) => {
                 ...state,
                 users: []
             }
+        case 'GET_USER_AND_REPO':
+            return{
+                ...state,
+                user: action.payload.user,
+                repos: action.payload.repos
+            }
+        // case 'GET_USER':
+        //     return{
+        //         ...state,
+        //         user: action.payload
+        //     }
+        // case 'GET_REPOS':
+        //     return {
+        //         ...state,
+        //         repos: action.payload
+        //     }
         default:
             return state
     }
